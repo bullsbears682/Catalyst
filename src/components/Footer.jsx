@@ -16,9 +16,9 @@ const Footer = () => {
         <div className="container">
           <div className="footer-content">
             <div className="footer-text">
-              <p>&copy; 2025 ROI Calculator Enterprise. Professional business analysis tools.</p>
+              <p>&copy; 2025 ROI Calculator. Built for business professionals.</p>
               <p className="footer-subtitle">
-                Built with research-backed data for enterprise decision makers.
+                Research-backed calculations to help you make better investment decisions.
               </p>
             </div>
             

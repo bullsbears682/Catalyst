@@ -15,7 +15,7 @@ export const roiCategories = {
           scalability: 0.20,
           security: 0.20
         },
-        researchSource: 'McKinsey Global Institute Cloud Computing Study 2023'
+        researchSource: 'McKinsey Cloud Study 2023'
       },
       'automation-platform': {
         name: 'Process Automation Platform',
@@ -303,7 +303,7 @@ export const roiCategories = {
           qualityImprovement: 0.30,
           costReduction: 0.20
         },
-        researchSource: 'OpenAI Enterprise Content ROI 2023'
+        researchSource: 'OpenAI Enterprise ROI Report'
       },
       'fraud-detection': {
         name: 'AI Fraud Detection System',
@@ -531,7 +531,7 @@ export const roiCategories = {
           realEstateSavings: 0.30,
           employeeSatisfaction: 0.25
         },
-        researchSource: 'GitLab Remote Work ROI 2023'
+        researchSource: 'GitLab Remote Work Study'
       },
       'workflow-automation': {
         name: 'Workflow Automation Platform',

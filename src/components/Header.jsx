@@ -28,7 +28,7 @@ const Header = ({
             <div className="brand-icon">📊</div>
             <div className="brand-text">
               <h1 className="brand-title">ROI Calculator</h1>
-              <p className="brand-subtitle">Enterprise</p>
+              <p className="brand-subtitle">for Business</p>
             </div>
           </div>
 

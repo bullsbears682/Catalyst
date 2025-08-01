@@ -17,7 +17,7 @@ const Calculator = ({
         <div className="card-header">
           <h2 className="card-title">ROI Calculator</h2>
           <p className="card-description">
-            Calculate return on investment with 85+ research-backed scenarios
+            Get realistic ROI estimates based on industry data from 85+ business scenarios
           </p>
         </div>
 

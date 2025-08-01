@@ -11,36 +11,47 @@ const PrivacyPolicy = ({ onClose }) => {
 
         <div className="modal-body privacy-content">
           <div className="privacy-section">
-            <p><strong>Last Updated:</strong> January 1, 2025</p>
+            <p><strong>Last Updated:</strong> December 15, 2024</p>
             <p><strong>Effective Date:</strong> January 1, 2025</p>
+            <p><em>Note: We're updating our privacy practices for the new year. The main changes are around cookie management and data retention periods.</em></p>
           </div>
 
           <div className="privacy-section">
-            <h3>1. Information We Collect</h3>
-            <h4>Personal Information</h4>
+            <h3>What Information Do We Collect?</h3>
+            <p>Look, we're not trying to be sneaky here. Here's what we actually collect and why:</p>
+            
+            <h4>Stuff You Give Us Directly</h4>
             <ul>
-              <li><strong>Contact Information:</strong> Name, email address, phone number, company name</li>
-              <li><strong>ROI Calculations:</strong> Investment amounts, categories, scenarios, and results</li>
-              <li><strong>Usage Data:</strong> How you interact with our calculator, pages visited, time spent</li>
-              <li><strong>Technical Data:</strong> IP address, browser type, device information, operating system</li>
+              <li><strong>Contact Info:</strong> Your name, email, phone number, company name (when you fill out forms)</li>
+              <li><strong>ROI Calculations:</strong> The numbers you put in, what categories you pick, your results</li>
+              <li><strong>Feedback:</strong> If you email us or use our contact forms</li>
             </ul>
 
-            <h4>Automatically Collected Information</h4>
+            <h4>Stuff We Collect Automatically</h4>
             <ul>
-              <li><strong>Cookies:</strong> We use necessary, functional, analytics, and marketing cookies</li>
-              <li><strong>Log Data:</strong> Server logs, error reports, performance metrics</li>
-              <li><strong>Analytics:</strong> User behavior, popular features, conversion rates</li>
+              <li><strong>Usage Data:</strong> Which pages you visit, how long you stay, what buttons you click</li>
+              <li><strong>Technical Stuff:</strong> Your IP address, browser type, device info (pretty standard web stuff)</li>
+              <li><strong>Performance Data:</strong> How fast the site loads for you, any errors you encounter</li>
+            </ul>
+
+            <h4>Cookies & Tracking</h4>
+            <p>Yeah, we use cookies. Most websites do. We try to be reasonable about it:</p>
+            <ul>
+              <li><strong>Essential Cookies:</strong> These keep the site working. Can't really turn these off.</li>
+              <li><strong>Analytics:</strong> Help us see what's popular and what's broken</li>
+              <li><strong>Preferences:</strong> Remember your settings so you don't have to keep re-entering them</li>
             </ul>
           </div>
 
           <div className="privacy-section">
-            <h3>2. How We Use Your Information</h3>
+            <h3>What Do We Do With Your Information?</h3>
+            <p>We're not in the business of selling your data. Here's what we actually do:</p>
             <ul>
-              <li><strong>Provide Service:</strong> Calculate ROI, generate reports, save your preferences</li>
-              <li><strong>Improve Product:</strong> Analyze usage patterns, fix bugs, add new features</li>
-              <li><strong>Communication:</strong> Send welcome emails, ROI reports, product updates</li>
-              <li><strong>Legal Compliance:</strong> Meet regulatory requirements, prevent fraud</li>
-              <li><strong>Marketing:</strong> Send relevant content (only with your consent)</li>
+              <li><strong>Make the calculator work:</strong> Obviously, we need your input to calculate ROI and generate reports</li>
+              <li><strong>Make it better:</strong> We look at usage patterns to fix bugs and add features people actually want</li>
+              <li><strong>Keep in touch:</strong> Send you your reports, maybe occasional updates (you can opt out)</li>
+              <li><strong>Stay legal:</strong> Sometimes we have to keep records for compliance reasons</li>
+              <li><strong>Marketing:</strong> Only if you explicitly say it's okay. We hate spam too.</li>
             </ul>
           </div>
 
