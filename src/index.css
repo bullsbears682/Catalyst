@@ -1090,3 +1090,81 @@ a:hover {
     font-size: 1.3rem;
   }
 }
+
+/* Privacy Policy & Terms of Service Styles */
+.privacy-policy-modal,
+.terms-modal {
+  max-width: 900px;
+  max-height: 90vh;
+}
+
+.privacy-content,
+.terms-section {
+  margin-bottom: var(--space-4);
+}
+
+.privacy-section h3,
+.terms-section h3 {
+  color: var(--primary);
+  font-size: 1.2rem;
+  margin-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: var(--space-2);
+}
+
+.privacy-section h4,
+.terms-section h4 {
+  color: var(--text-primary);
+  font-size: 1rem;
+  margin: var(--space-3) 0 var(--space-2) 0;
+}
+
+.gdpr-rights,
+.cookie-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-3);
+  margin: var(--space-4) 0;
+}
+
+.right-item,
+.cookie-type {
+  background: var(--bg-secondary);
+  padding: var(--space-3);
+  border-radius: var(--border-radius);
+  border-left: 3px solid var(--primary);
+}
+
+.contact-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+}
+
+.contact-item {
+  background: var(--bg-secondary);
+  padding: var(--space-3);
+  border-radius: var(--border-radius);
+}
+
+.contact-item h4 {
+  color: var(--primary);
+  margin-bottom: var(--space-2);
+}
+
+.footer-link {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: inherit;
+  text-decoration: none;
+  padding: 0;
+  margin: 0 var(--space-2);
+}
+
+.footer-link:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
