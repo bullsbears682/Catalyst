@@ -1,0 +1,58 @@
+{
+  "name": "roi-calculator-enterprise",
+  "version": "1.0.0",
+  "description": "Enterprise-grade ROI Calculator with PWA features",
+  "main": "api/server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run api:dev\" \"npm run client:dev\"",
+    "api:dev": "nodemon api/server.js",
+    "client:dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node api/server.js",
+    "test": "jest",
+    "lint": "eslint src api --ext .js,.jsx,.ts,.tsx"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "cors": "^2.8.5",
+    "sqlite3": "^5.1.6",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.7",
+    "compression": "^1.7.4",
+    "morgan": "^1.10.0",
+    "dotenv": "^16.3.1",
+    "uuid": "^9.0.1",
+    "puppeteer": "^21.5.2",
+    "chart.js": "^4.4.0",
+    "jspdf": "^2.5.1",
+    "html2canvas": "^1.4.1"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "vite-plugin-pwa": "^0.17.4",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2",
+    "eslint": "^8.55.0",
+    "jest": "^29.7.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "roi-calculator",
+    "enterprise",
+    "pwa",
+    "business-tools"
+  ],
+  "author": "Enterprise Solutions",
+  "license": "MIT"
+}
