@@ -22,7 +22,15 @@ import * as apiService from './services/api'
 
 function App() {
   // Core state
-  const [currentView, setCurrentView] = useState('calculator') // calculator, results, admin
+  const [currentView, setCurrentView] = useState('calculator')
+  
+  // Check URL for admin access
+  useEffect(() => {
+    const path = window.location.pathname
+    if (path === '/admin' || path === '/dashboard') {
+      setCurrentView('admin')
+    }
+  }, []) // calculator, results, admin
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(null)
   const [success, setSuccess] = useState(null)
