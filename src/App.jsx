@@ -8,6 +8,7 @@ import Results from './components/Results'
 import LeadForm from './components/LeadForm'
 import AdminDashboard from './components/AdminDashboard'
 import Footer from './components/Footer'
+import CookieConsent from './components/CookieConsent'
 import LoadingSpinner from './components/LoadingSpinner'
 import ErrorMessage from './components/ErrorMessage'
 import SuccessMessage from './components/SuccessMessage'
@@ -410,6 +411,9 @@ function App() {
 
       {/* Footer */}
       <Footer />
+
+      {/* GDPR Cookie Consent */}
+      <CookieConsent />
 
       {/* Offline Indicator */}
       {!isOnline && (

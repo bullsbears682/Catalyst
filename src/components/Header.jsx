@@ -41,12 +41,16 @@ const Header = ({
               Calculator
             </button>
             
-            {adminAuthenticated && (
+            {/* Show Back to Calculator button only when in admin view */}
+            {currentView === 'admin' && (
               <button
-                className={`nav-btn ${currentView === 'admin' ? 'active' : ''}`}
-                onClick={() => onViewChange('admin')}
+                className="nav-btn"
+                onClick={() => {
+                  onViewChange('calculator')
+                  window.history.pushState({}, '', '/')
+                }}
               >
-                Admin
+                ← Back to Calculator
               </button>
             )}
 
@@ -66,15 +70,17 @@ const Header = ({
               {isOnline ? '🟢' : '🔴'}
             </div>
 
-            {/* Admin Access */}
-            {!adminAuthenticated ? (
+            {/* Admin Access - Hidden, only accessible via URL */}
+            {currentView === 'admin' && !adminAuthenticated && (
               <button
                 className="btn btn-secondary btn-sm"
                 onClick={() => setShowAdminLogin(true)}
               >
-                Admin
+                🔐 Admin Login
               </button>
-            ) : (
+            )}
+            
+            {currentView === 'admin' && adminAuthenticated && (
               <button
                 className="btn btn-secondary btn-sm"
                 onClick={() => {
