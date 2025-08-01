@@ -17,6 +17,7 @@ const {
 const { initDatabase, insertLead, getLeads, getAnalytics } = require('./database/db')
 const { calculateROI } = require('./utils/calculations')
 const { sendLeadNotification } = require('./utils/email')
+const { generateROIPDF } = require('./utils/pdfGenerator')
 
 const app = express()
 const PORT = process.env.PORT || 3001
@@ -307,7 +308,7 @@ app.post('/api/export/pdf', calculatorLimiter, validateApiKey, async (req, res) 
       })
     }
 
-    // Generate PDF (implement PDF generation logic)
+    // Generate PDF
     const pdfBuffer = await generateROIPDF(roiData, companyName, contactInfo)
 
     res.setHeader('Content-Type', 'application/pdf')
