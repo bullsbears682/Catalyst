@@ -1,7 +1,7 @@
 // src/config.js - Production Ready Configuration
 const config = {
-    API_BASE_URL: process.env.NODE_ENV === 'production'
-    ? 'https://catalyst-api-production.up.railway.app'
+  API_BASE_URL: process.env.NODE_ENV === 'production'
+    ? '' // Same domain for Vercel full-stack
     : 'http://localhost:3001',
   API_KEY: 'demo-key-2025',
   ADMIN_API_KEY: 'catalyst-admin-2025',
