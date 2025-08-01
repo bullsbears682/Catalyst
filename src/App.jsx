@@ -25,11 +25,25 @@ function App() {
   // Core state
   const [currentView, setCurrentView] = useState('calculator')
   
-  // Check URL for admin access
+  // Check URL for admin access and handle routing
   useEffect(() => {
-    const path = window.location.pathname
-    if (path === '/admin' || path === '/dashboard') {
-      setCurrentView('admin')
+    const handleRouting = () => {
+      const path = window.location.pathname
+      if (path === '/admin' || path === '/dashboard') {
+        setCurrentView('admin')
+      } else if (path === '/') {
+        setCurrentView('calculator')
+      }
+    }
+
+    // Handle initial load
+    handleRouting()
+
+    // Listen for browser navigation
+    window.addEventListener('popstate', handleRouting)
+    
+    return () => {
+      window.removeEventListener('popstate', handleRouting)
     }
   }, []) // calculator, results, admin
   const [isLoading, setIsLoading] = useState(false)

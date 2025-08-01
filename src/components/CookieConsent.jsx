@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import PrivacyPolicy from './PrivacyPolicy'
 
 const CookieConsent = () => {
   const [showBanner, setShowBanner] = useState(false)
   const [showPreferences, setShowPreferences] = useState(false)
+  const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false)
   const [cookiePreferences, setCookiePreferences] = useState({
     necessary: true, // Always required
     analytics: false,
@@ -149,10 +151,15 @@ const CookieConsent = () => {
     }
   }
 
-  if (!showBanner && !showPreferences) return null
+  if (!showBanner && !showPreferences && !showPrivacyPolicy) return null
 
   return (
     <>
+      {/* Privacy Policy Modal */}
+      {showPrivacyPolicy && (
+        <PrivacyPolicy onClose={() => setShowPrivacyPolicy(false)} />
+      )}
+
       {/* Cookie Banner */}
       {showBanner && (
         <div className="cookie-banner">
@@ -163,9 +170,12 @@ const CookieConsent = () => {
                 We use cookies to enhance your browsing experience, serve personalized content, 
                 and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. 
                 You can customize your preferences or learn more in our{' '}
-                <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">
+                <button 
+                  onClick={() => setShowPrivacyPolicy(true)}
+                  style={{ color: 'var(--primary)', textDecoration: 'underline', background: 'none', border: 'none', cursor: 'pointer' }}
+                >
                   Privacy Policy
-                </a>.
+                </button>.
               </p>
             </div>
             
