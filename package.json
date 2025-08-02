@@ -33,21 +33,21 @@
     "chart.js": "^4.4.0",
     "react-chartjs-2": "^5.2.0",
     "jspdf": "^2.5.1",
-    "html2canvas": "^1.4.1"
-  },
-  "devDependencies": {
+    "html2canvas": "^1.4.1",
     "vite": "^5.0.0",
     "vite-plugin-pwa": "^0.17.4",
-    "concurrently": "^8.2.2",
-    "nodemon": "^3.0.2",
-    "eslint": "^8.55.0",
-    "jest": "^29.7.0",
     "@vitejs/plugin-react": "^4.2.0",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.6",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2",
+    "eslint": "^8.55.0",
+    "jest": "^29.7.0"
   },
   "engines": {
     "node": ">=18.0.0"
