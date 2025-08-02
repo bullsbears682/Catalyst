@@ -25,10 +25,10 @@ const Header = ({
         <div className="header-content flex items-center justify-between">
           {/* Logo and Title */}
           <div className="header-brand flex items-center">
-            <div className="brand-icon">📊</div>
+            <div className="brand-icon">🧡</div>
             <div className="brand-text">
-              <h1 className="brand-title">ROI Calculator</h1>
-              <p className="brand-subtitle">for Business</p>
+              <h1 className="brand-title">HubSpot ROI Calculator</h1>
+              <p className="brand-subtitle">Grow Better with Data-Driven Decisions</p>
             </div>
           </div>
 

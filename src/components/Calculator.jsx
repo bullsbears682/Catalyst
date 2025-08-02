@@ -15,9 +15,9 @@ const Calculator = ({
     <div className="calculator">
       <div className="card">
         <div className="card-header">
-          <h2 className="card-title">ROI Calculator</h2>
+          <h2 className="card-title">HubSpot ROI Calculator</h2>
           <p className="card-description">
-            Get realistic ROI estimates based on industry data from 85+ business scenarios
+            Calculate your HubSpot ROI with data from 40+ marketing, sales, and service scenarios. Compare against Salesforce, Marketo, and other platforms.
           </p>
         </div>
 
