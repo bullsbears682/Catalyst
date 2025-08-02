@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  
+  <!-- PWA Meta Tags -->
+  <meta name="theme-color" content="#FF7A59" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="HubSpot ROI Calculator" />
+  
+  <!-- SEO Meta Tags -->
+  <title>HubSpot ROI Calculator - Marketing & Sales Investment Analysis</title>
+  <meta name="description" content="Calculate your HubSpot ROI and compare against Salesforce, Marketo, Zendesk. Marketing automation, CRM, and customer service ROI analysis." />
+  <meta name="keywords" content="HubSpot ROI, marketing automation ROI, CRM ROI, sales enablement, customer service ROI, Salesforce comparison, Marketo comparison" />
+  <meta name="author" content="HubSpot ROI Calculator" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="HubSpot ROI Calculator" />
+  <meta property="og:description" content="Calculate your HubSpot ROI with 40+ marketing, sales, and service scenarios. Compare against competitors." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.com" />
+  <meta property="og:image" content="/og-image.png" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HubSpot ROI Calculator" />
+  <meta name="twitter:description" content="Calculate your HubSpot ROI with 40+ marketing, sales, and service scenarios." />
+  <meta name="twitter:image" content="/twitter-image.png" />
+  
+  <!-- Favicon and Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#667eea" />
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Critical CSS for Above-the-Fold Content -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+      font-size: 16px; /* Prevent iOS zoom */
+      line-height: 1.6;
+      color: #333;
+      background: #f8fafc;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    /* Loading Screen */
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      color: white;
+    }
+    
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-top: 3px solid white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .loading-text {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    
+    .loading-subtext {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+    
+    /* Hide loading screen when app loads */
+    .app-loaded .loading-screen {
+      display: none;
+    }
+    
+    /* Ensure proper mobile viewport */
+    @media screen and (max-width: 768px) {
+      body {
+        font-size: 16px; /* Prevent iOS zoom on input focus */
+      }
+      
+      input, select, textarea {
+        font-size: 16px; /* Prevent iOS zoom */
+      }
+    }
+    
+    /* High contrast mode support */
+    @media (prefers-contrast: high) {
+      body {
+        background: white;
+        color: black;
+      }
+    }
+    
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+      .loading-spinner {
+        animation: none;
+      }
+    }
+  </style>
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ROI Calculator Enterprise",
+    "description": "Professional ROI Calculator with 85+ research-backed scenarios for enterprise decision making",
+    "url": "https://your-domain.com",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "creator": {
+      "@type": "Organization",
+      "name": "ROI Calculator Enterprise"
+    }
+  }
+  </script>
+  <script type="module" crossorigin src="/assets/index-C9_cubXy.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/vendor-nf7bT_Uh.js">
+  <link rel="stylesheet" crossorigin href="/assets/index-CAiAdXX3.css">
+<link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">ROI Calculator Enterprise</div>
+    <div class="loading-subtext">Loading professional analysis tools...</div>
+  </div>
+  
+  <!-- Main App Container -->
+  <div id="root"></div>
+  
+  <!-- Service Worker Registration -->
+  <script>
+    // Register service worker for PWA functionality
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((registration) => {
+            console.log('SW registered: ', registration);
+          })
+          .catch((registrationError) => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+    
+    // Hide loading screen when app loads
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.body.classList.add('app-loaded');
+      }, 500);
+    });
+    
+    // Install PWA prompt
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      // Show install button when ready
+      const installButton = document.getElementById('pwa-install-button');
+      if (installButton) {
+        installButton.style.display = 'block';
+      }
+    });
+  </script>
+  
+  <!-- Main Application Script -->
+</body>
+</html>

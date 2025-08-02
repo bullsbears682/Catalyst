@@ -674,8 +674,84 @@ export const getTotalScenarios = () => {
   return total
 }
 
+// ROI Scenarios for different business contexts
+export const roiScenarios = {
+  'conservative': {
+    name: 'Conservative Estimate',
+    description: 'Lower-bound projections with minimal risk assumptions',
+    multiplier: 0.7,
+    riskFactor: 0.1,
+    adoptionRate: 0.6
+  },
+  'realistic': {
+    name: 'Realistic Projection', 
+    description: 'Most likely outcome based on industry averages',
+    multiplier: 1.0,
+    riskFactor: 0.2,
+    adoptionRate: 0.8
+  },
+  'optimistic': {
+    name: 'Optimistic Scenario',
+    description: 'Best-case projections with ideal implementation',
+    multiplier: 1.3,
+    riskFactor: 0.3,
+    adoptionRate: 0.95
+  }
+}
+
+// Utility function for ROI calculations
+export const calculateROI = (investment, category, scenario, specificScenario = null, timeframe = null) => {
+  try {
+    const categoryData = roiCategories[category]
+    const scenarioData = roiScenarios[scenario]
+    
+    if (!categoryData || !scenarioData) {
+      throw new Error('Invalid category or scenario')
+    }
+    
+    // Use specific scenario if provided, otherwise use first scenario from category
+    const scenarioKey = specificScenario || Object.keys(categoryData.scenarios)[0]
+    const roiData = categoryData.scenarios[scenarioKey]
+    
+    if (!roiData) {
+      throw new Error('Invalid specific scenario')
+    }
+    
+    const baseROI = roiData.averageROI * scenarioData.multiplier
+    const timeToROI = timeframe || roiData.timeframe
+    const riskAdjustedROI = baseROI * (1 - scenarioData.riskFactor)
+    
+    const totalReturn = investment * riskAdjustedROI
+    const netReturn = totalReturn - investment
+    const monthlyReturn = netReturn / timeToROI
+    const annualReturn = monthlyReturn * 12
+    
+    return {
+      investment,
+      totalReturn: Math.round(totalReturn),
+      netReturn: Math.round(netReturn),
+      roi: Math.round((riskAdjustedROI - 1) * 100),
+      timeToROI,
+      monthlyReturn: Math.round(monthlyReturn),
+      annualReturn: Math.round(annualReturn),
+      breakEvenMonths: Math.ceil(investment / monthlyReturn),
+      riskLevel: scenarioData.riskFactor,
+      category: categoryData.name,
+      scenario: scenarioData.name,
+      researchSource: roiData.researchSource,
+      hubSpotFeatures: roiData.hubSpotFeatures || [],
+      competitorComparison: roiData.competitorComparison || {}
+    }
+  } catch (error) {
+    console.error('ROI Calculation Error:', error)
+    return null
+  }
+}
+
 export default {
   roiCategories,
+  roiScenarios,
+  calculateROI,
   hubSpotConfig,
   getTotalScenarios
 }

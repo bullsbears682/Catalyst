@@ -1,5 +1,5 @@
 import React from 'react'
-import { roiCategories, roiScenarios } from '../data/roiData'
+import { roiCategories } from '../data/roiData'
 
 const Calculator = ({ 
   formData, 
